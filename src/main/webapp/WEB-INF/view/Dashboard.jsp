@@ -36,7 +36,9 @@
         line-height: 1.6;
         overflow-x: hidden;
       }
-
+ a{
+        text-decoration: none;
+      }
       .container {
         display: flex;
         min-height: 100vh;
@@ -141,7 +143,7 @@
         background-color: var(--warning);
         color: var(--bg-primary);
       }
-      .status-active {
+      .status-completed {
         background-color: var(--success);
         color: var(--bg-primary);
       }
@@ -194,7 +196,14 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
 
-      
+      li{
+        margin-bottom: 10px;
+        transition: all 1s;
+      }
+      li:hover{
+        background-color: #0D0D0D;
+        scale: 1.2;
+      }
 
      
     </style>
@@ -285,11 +294,13 @@
                     </td>
                     <td>${customer.amount}</td>
                     <td>
-                        <span class="status status-${customer.status.toLowerCase()}">
-                            ${customer.status}
+                        <span class="status status-${customer.receipts.order_status.toLowerCase()}">
+                            ${customer.receipts.order_status}
                         </span>
                     </td>
-                    <td><button class="btn">View Details</button></td>
+                    <!-- <td><button class="btn">  View Details</button></td> -->
+                   <td><a href="viewdetails?id=${customer.id}" class="btn">View Details</a></td>
+
                 </tr>
             </c:forEach>
           

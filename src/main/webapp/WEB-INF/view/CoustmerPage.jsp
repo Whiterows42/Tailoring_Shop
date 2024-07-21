@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Tailoring Shop</title>
- <link rel="icon" href="Self.svg" type="image/svg+xml" />
+<link rel="icon" href="Self.svg" type="image/svg+xml" />
 <link
 	href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
 	rel="stylesheet" />
@@ -49,12 +49,13 @@ body {
 	padding: 2rem;
 	overflow-y: auto;
 }
- .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        color: var(--accent);
-      }
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	color: var(--accent);
+}
 
 .main-content {
 	flex: 1;
@@ -142,45 +143,60 @@ button:hover {
 .tostmessage {
 	position: fixed;
 	bottom: 5px;
-	right: 56px;
-	padding: 10px;
+	right: 60px;
+	border: 1px solid white;
+	padding: 40px 40px;
+	border-radius: 7px;
 	background-color: #111111;
+}
+
+input {
+	transition: all 1s !important;
+}
+
+input:hover {
+	scale: 1.1;
+}
+
+li {
+	margin-bottom: 10px;
+	transition: all 1s;
+}
+
+li:hover {
+	background-color: #0D0D0D;
+	scale: 1.2;
 }
 </style>
 </head>
 <body>
 	<div class="container">
 		<aside class="sidebar glassmorphism">
-		
-        <div class="logo glow">Tailoring Shop</div>
-        <nav>
-         <li style="display: flex ; align-items: center; gap:5px">
-					<i class="ri-dashboard-line"></i>
-					<a href="dashboard"
-						style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">
-							Dashboard</a></li>
-				<li style="display: flex ; align-items: center; gap:5px">
-					<i class="ri-shield-user-line"></i>
-					<a href="coustomer"
-						style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Customer
-							Details</a></li>
-					<li style="display: flex ; align-items: center; gap:5px">
-					<i class="ri-shirt-line"></i>
-					<a href="coustomer#shirt"
-						style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Shirt
-							Measurements</a></li>
-					<li style="display: flex ; align-items: center; gap:5px">
-					<i class="ri-wheelchair-line"></i>
-					<a href="coustomer#pant"
-						style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Pant
-							Measurements</a></li>
-						<li style="display: flex ; align-items: center; gap:5px">
-					<i class="ri-truck-line"></i>
-					<a href="coustomer#order"
-						style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Order
-							Details</a></li>
-        </nav>
-      </aside>
+
+			<div class="logo glow">Tailoring Shop</div>
+			<nav>
+				<li style="display: flex; align-items: center; gap: 5px"><i
+					class="ri-dashboard-line"></i> <a href="dashboard"
+					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">
+						Dashboard</a></li>
+				<li style="display: flex; align-items: center; gap: 5px"><i
+					class="ri-shield-user-line"></i> <a href="coustomer"
+					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Customer
+						Details</a></li>
+				<li style="display: flex; align-items: center; gap: 5px"><i
+					class="ri-shirt-line"></i> <a href="coustomer#shirt"
+					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Shirt
+						Measurements</a></li>
+				<li style="display: flex; align-items: center; gap: 5px"><i
+					class="ri-wheelchair-line"></i> <a href="coustomer#pant"
+					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Pant
+						Measurements</a></li>
+				<li style="display: flex; align-items: center; gap: 5px"><i
+					class="ri-truck-line"></i> <a href="coustomer#order"
+					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Order
+						Details</a></li>
+			</nav>
+		</aside>
 
 		<main class="main-content">
 			<h1>${msg}</h1>
@@ -417,19 +433,23 @@ button:hover {
 				<button type="submit">Submit</button>
 			</form>
 
-
-			<div id="tost" style="display: ${render}" class="tostmessage">
-				<div
-					style="display: flex; justify-content: space-between; gap: 30px; align-items: center;">
-					<h3>Success</h3>
-					<div style="text-align: right;">
-						<h1 style="cursor: pointer;" id="corss">X</h1>
+			<div id="tost" class="tostmessage" style="display: ${render}";>
+				<div style="text-align: right">
+					<h3
+						style="cursor: pointer; position: absolute; right: 10px; top: 5px"
+						id="corss">
+						<i class="ri-close-large-line"></i>
+					</h3>
+				</div>
+				<div>
+					<div
+						style="display: flex; justify-content: space-between; gap: 20px; align-items: center;">
+						<img src="right.svg" alt="" />
+						<div>Data Added Successfully</div>
 					</div>
 				</div>
-
-				<div>Data Added Successfully</div>
 			</div>
-			
+
 		</main>
 	</div>
 	<script>
