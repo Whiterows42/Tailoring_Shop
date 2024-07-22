@@ -42,6 +42,7 @@ tailor-shop-management/
 │   └── test/
 ├── pom.xml
 └── README.md
+```
 
 ## Setup Instructions
 1. **Clone the Repository**
