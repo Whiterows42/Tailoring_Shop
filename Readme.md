@@ -146,5 +146,45 @@ CREATE TABLE receipt (
 ![Spring_internal_Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
 
 
+## Class Architecture
 
+![Classes_Workflow](https://github.com/user-attachments/assets/0dfeb6ef-ddc3-4171-a695-0c57ff85a9d3)
+
+
+## Working flow
+
+Landing Page
+![homepage](https://github.com/user-attachments/assets/fcbe742f-cf0c-4940-8950-505cdedffe0b)
+
+Request URL: /coustomer
+Controller Method: sendToLandingPage(Model model)
+View: CoustmerPage.jsp
+![coustmoer_page](https://github.com/user-attachments/assets/9edf6baa-09d7-4fc3-be7b-0e25099dbf02)
+
+Description: Renders the customer landing page with a welcome message.
+Add Customer Data
+Request URL: /getdata
+Controller Method: getData(@ModelAttribute Coustmer c, Model model)
+View: CoustmerPage.jsp
+![tostMessage](https://github.com/user-attachments/assets/c4ebad4d-1a04-4fd6-8dcb-4c69a3b0270f)
+
+Description: Inserts customer data into the database and updates the view with a success message.
+Admin Dashboard
+Request URL: /dashboard
+Controller Method: admindashboard(Model model)
+View: Dashboard.jsp
+![Admindashboard_page](https://github.com/user-attachments/assets/816a73de-ba97-4124-b3ee-2f79b9b8ef9b)
+
+Description: Displays the admin dashboard with user count, order count, customer details, and monthly revenue.
+![Order_Details](https://github.com/user-attachments/assets/c175e312-0f5c-4a3b-9cef-afceb4c90a19)
+
+
+Usage
+Navigate to the customer page to add new customer details.
+View the admin dashboard for an overview of the shop's performance, including customer counts, order counts, and revenue.
+
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
 
