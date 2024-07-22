@@ -133,5 +133,11 @@ Navigate to the customer page to add new customer details.
 View the admin dashboard for an overview of the shop's performance, including customer counts, order counts, and revenue.
 Contributing
 Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
+![Spring_internal_Work](https://github.com/user-attachments/assets/799f738c-2393-41fd-9a63-ae2cbdd3e278)
+![Classes_Workflow](https://github.com/user-attachments/assets/53bbd200-9ea1-447b-b923-31d6440bffa7)
+![homepage](https://github.com/user-attachments/assets/1bff3a9b-55ed-4149-86c2-4de2c6152e71)
 
 
+![coustmoer_page](https://github.com/user-attachments/assets/44dc7451-276d-4b57-b976-e6ab80ed3fd7)
+![Admindashboard_page](https://github.com/user-attachments/assets/656f5117-429f-473a-a70a-1ab0ec4b5a3b)
+![Order_Details](https://github.com/user-attachments/assets/bb856928-212c-492a-90a7-71a1dc943727)
