@@ -68,6 +68,10 @@ tailor-shop-management/
 
 4. **Access the Application**
     - Open a browser and navigate to `http://localhost:8080/coustomer`.
+## DataBase Schema Digram 
+
+![drawSQL-image-export-2024-07-22](https://github.com/user-attachments/assets/bc85af80-20bd-489a-9821-8c067429bf57)
+
 
 ## Database Schema
 ```sql
@@ -138,6 +142,8 @@ CREATE TABLE receipt (
 
 
 
+## Architecture
+![Spring_internal_Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
 
 
 
