@@ -112,7 +112,7 @@ CREATE TABLE receipt (
 );
 
 
-Workflow
+##Workflow
 Landing Page
 Request URL: /coustomer
 Controller Method: sendToLandingPage(Model model)
@@ -141,3 +141,20 @@ Contributions are welcome! Please fork the repository and submit pull requests f
 ![coustmoer_page](https://github.com/user-attachments/assets/44dc7451-276d-4b57-b976-e6ab80ed3fd7)
 ![Admindashboard_page](https://github.com/user-attachments/assets/656f5117-429f-473a-a70a-1ab0ec4b5a3b)
 ![Order_Details](https://github.com/user-attachments/assets/bb856928-212c-492a-90a7-71a1dc943727)
+
+tailor-shop-management/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── tailor/
+│   │   │           └── shop/
+│   │   │               ├── controllers/
+│   │   │               ├── models/
+│   │   │               ├── repositories/
+│   │   │               └── services/
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+├── pom.xml
+└── README.md
