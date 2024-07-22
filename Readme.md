@@ -3,6 +3,8 @@
 ## Overview
 The Tailor Shop Management System is a web application designed to manage customer orders, including detailed measurements for shirts and pants, payments, and receipts. This application is built using Spring MVC, Spring JDBC, and integrates a MySQL database to handle data persistence. The project is designed to be modular and easily maintainable.
 
+![Homepage](https://github.com/user-attachments/assets/1bff3a9b-55ed-4149-86c2-4de2c6152e71)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
@@ -12,6 +14,7 @@ The Tailor Shop Management System is a web application designed to manage custom
 - [Architecture](#architecture)
 - [Workflow](#workflow)
 - [Usage](#usage)
+- [Contributing](#contributing)
 
 ## Features
 - Customer management: Add, update, and view customer details.
@@ -19,7 +22,26 @@ The Tailor Shop Management System is a web application designed to manage custom
 - Payment tracking: Track payments, paid amounts, and pending amounts.
 - Dashboard: Overview of customer count, order count, and monthly revenue.
 
+![Admin Dashboard](https://github.com/user-attachments/assets/656f5117-429f-473a-a70a-1ab0ec4b5a3b)
 
+## Project Structure
+```plaintext
+tailor-shop-management/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── tailor/
+│   │   │           └── shop/
+│   │   │               ├── controllers/
+│   │   │               ├── models/
+│   │   │               ├── repositories/
+│   │   │               └── services/
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+├── pom.xml
+└── README.md
 
 ## Setup Instructions
 1. **Clone the Repository**
@@ -110,6 +132,10 @@ CREATE TABLE receipt (
     pending_amount FLOAT,
     FOREIGN KEY (customer) REFERENCES customer(email)
 );
+```
+
+
+
 
 
 
