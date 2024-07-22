@@ -112,26 +112,6 @@ CREATE TABLE receipt (
 );
 
 
-Workflow
-Landing Page
-Request URL: /coustomer
-Controller Method: sendToLandingPage(Model model)
-View: CoustmerPage.jsp
-Description: Renders the customer landing page with a welcome message.
-Add Customer Data
-Request URL: /getdata
-Controller Method: getData(@ModelAttribute Coustmer c, Model model)
-View: CoustmerPage.jsp
-Description: Inserts customer data into the database and updates the view with a success message.
-Admin Dashboard
-Request URL: /dashboard
-Controller Method: admindashboard(Model model)
-View: Dashboard.jsp
-Description: Displays the admin dashboard with user count, order count, customer details, and monthly revenue.
-Usage
-Navigate to the customer page to add new customer details.
-View the admin dashboard for an overview of the shop's performance, including customer counts, order counts, and revenue.
-Contributing
-Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
+
 
 
