@@ -180,19 +180,19 @@ li:hover {
 					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">
 						Dashboard</a></li>
 				<li style="display: flex; align-items: center; gap: 5px"><i
-					class="ri-shield-user-line"></i> <a href="coustomer"
+					class="ri-shield-user-line"></i> <a href="cm"
 					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Customer
 						Details</a></li>
 				<li style="display: flex; align-items: center; gap: 5px"><i
-					class="ri-shirt-line"></i> <a href="coustomer#shirt"
+					class="ri-shirt-line"></i> <a href="cm#shirt"
 					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Shirt
 						Measurements</a></li>
 				<li style="display: flex; align-items: center; gap: 5px"><i
-					class="ri-wheelchair-line"></i> <a href="coustomer#pant"
+					class="ri-wheelchair-line"></i> <a href="cm#pant"
 					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Pant
 						Measurements</a></li>
 				<li style="display: flex; align-items: center; gap: 5px"><i
-					class="ri-truck-line"></i> <a href="coustomer#order"
+					class="ri-truck-line"></i> <a href="cm#order"
 					style="color: var(--text-primary); text-decoration: none; display: block; padding: 0.5rem 0;">Order
 						Details</a></li>
 			</nav>

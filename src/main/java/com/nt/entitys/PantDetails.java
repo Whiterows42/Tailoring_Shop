@@ -1,7 +1,7 @@
 package com.nt.entitys;
 
 public class PantDetails {
-	
+
 		private String pantHeight;
 		private String pantKnee;
 		private String pantLegsBottom;
@@ -16,9 +16,9 @@ public class PantDetails {
 		private String pantTip;
 		private String pantType;
 		private String pantWaist;
-		
-	
-	
+
+
+
 	public PantDetails(String pantHeight, String pantKnee, String pantLegsBottom, String pantOther, String pantPocket,
 			String pantPress, String pantQuantity, float pantRate, String pantSeat, String pantShape, String pantThigh,
 			String pantTip, String pantType, String pantWaist) {
@@ -38,7 +38,7 @@ public class PantDetails {
 		this.pantType = pantType;
 		this.pantWaist = pantWaist;
 	}
-	
+
 	public PantDetails() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -137,6 +137,6 @@ public class PantDetails {
 				+ pantType + ", pantWaist=" + pantWaist + "]";
 	}
 
-	
-	
+
+
 }

@@ -1,6 +1,12 @@
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
+  
     <title>Tailoring Shop - Bespoke Tailoring Excellence</title>
+    
+   <link rel="icon" type="image/icon" href="<c:url value='/resources/image/right.svg' />">
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap");
 
@@ -140,12 +146,12 @@
       <div class="container">
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="home">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-              <a href="https://tailorpro.vision/app" class="btn">Login</a>
+              <a href="admin/loginUser" class="btn">Login</a>
             </li>
           </ul>
         </nav>
@@ -160,7 +166,7 @@
             Experience the future of bespoke tailoring with our cutting-edge
             management system.
           </p>
-          <a href="coustomer" class="btn">Get Started</a>
+          <a href="user/cm" class="btn">Get Started</a>
         </div>
       </section>
 

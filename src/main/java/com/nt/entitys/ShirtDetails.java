@@ -18,9 +18,9 @@ public class ShirtDetails {
 	private String shirtSleeveCup;
 	private String shirtStomach;
 	private String shirtType;
-	
-	
-	
+
+
+
 	public ShirtDetails(String shirtChest, String shirtCollar, String shirtHandLoose, String shirtHeight,
 			String shirtLoose, String shirtOther, String shirtPress, String shirtQuantity, float shirtRate,
 			String shirtShape, String shirtShoulder, String shirtSleeve, String shirtSleeveCup, String shirtStomach,
@@ -42,9 +42,9 @@ public class ShirtDetails {
 		this.shirtStomach = shirtStomach;
 		this.shirtType = shirtType;
 	}
-	
-	
-	
+
+
+
 	public ShirtDetails() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -152,5 +152,5 @@ public class ShirtDetails {
 				+ shirtStomach + ", shirtType=" + shirtType + "]";
 	}
 
-	
+
 }

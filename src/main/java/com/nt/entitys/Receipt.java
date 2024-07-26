@@ -10,9 +10,9 @@ public class Receipt {
 	private Float amount;
 	private Float paidAmount;
 	private Float pendingAmount;
-	
-	
-	
+
+
+
 	public Receipt(Date currDate, Date deliveryDate, String order_status, Float amount, Float paidAmount,
 			Float pendingAmount) {
 		super();
@@ -23,8 +23,8 @@ public class Receipt {
 		this.paidAmount = paidAmount;
 		this.pendingAmount = pendingAmount;
 	}
-	
-	
+
+
 	public Receipt() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -43,8 +43,8 @@ public class Receipt {
 	public void setDeliveryDate(java.sql.Date deliveryDate) {
 		this.deliveryDate = deliveryDate;
 	}
-	
-	
+
+
 	public Float getAmount() {
 		return amount;
 	}
@@ -75,10 +75,10 @@ public class Receipt {
 				+ order_status + ", amount=" + amount + ", paidAmount=" + paidAmount + ", pendingAmount="
 				+ pendingAmount + "]";
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 }

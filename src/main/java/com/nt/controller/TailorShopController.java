@@ -4,6 +4,8 @@ package com.nt.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.nt.daos.CoustomerDao;
 import com.nt.daos.Dashboarddao;
+import com.nt.entitys.Admin;
 import com.nt.entitys.Coustmer;
 
 @Controller
+@RequestMapping("/user")
 public class TailorShopController {
 
 	@Autowired
@@ -23,7 +27,7 @@ public class TailorShopController {
 	@Autowired
 	private Dashboarddao dashboarddao;
 
-	@RequestMapping("/coustomer")
+	@RequestMapping("/cm")
 	public String sendToLandingPage(Model model) {
 
 		model.addAttribute("msg", "Welcome ");
@@ -33,9 +37,9 @@ public class TailorShopController {
 	}
 
 	@RequestMapping("/getdata")
-	public String getData(@ModelAttribute Coustmer c, Model model) {
-
-		dao.insertCoustomer(c);
+	public String getData(@ModelAttribute Coustmer c, Model model, HttpSession session) {
+		String name = (String) session.getAttribute("useremail");
+		dao.insertCoustomer(c, name);
 		System.out.println(c);
 
 		model.addAttribute("render", "block");
@@ -44,12 +48,15 @@ public class TailorShopController {
 	}
 
 	@RequestMapping("/dashboard")
-	public String admindashboard(Model model) {
-		int count = dashboarddao.showUserCount();
-		int ordercount = dashboarddao.showOrderCount();
-		List<Coustmer> coustmers = dashboarddao.getAllCustomers();
-//	System.out.println(coustmers);
-		Map<String, Float> revenueData = dashboarddao.getMonthlyRevenue();
+	public String admindashboard( HttpSession session ,Model model) {
+		System.out.println(session.getAttribute("useremail"));
+		String name = (String) session.getAttribute("useremail");
+		int count = dashboarddao.showUserCount(name);
+		int ordercount = dashboarddao.showOrderCount(name);
+		List<Coustmer> coustmers = dashboarddao.getAllCustomers(name);
+		Map<String, Float> revenueData = dashboarddao.getMonthlyRevenue(name);
+		Admin admin = dashboarddao.getAdmins(name);
+		model.addAttribute("admin", admin);
 		model.addAttribute("revenueData", revenueData);
 		model.addAttribute("customers", coustmers);
 		model.addAttribute("ordercount", ordercount);
@@ -65,4 +72,13 @@ public class TailorShopController {
 
 		return "viewCoustomerDetails";
 	}
+
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+
+		session.setAttribute("useremail", null);
+
+		return "redirect:/";
+	}
+
 }

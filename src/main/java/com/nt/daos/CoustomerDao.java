@@ -1,5 +1,6 @@
 package com.nt.daos;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -13,14 +14,16 @@ public class CoustomerDao {
 	@Autowired
 	private JdbcTemplate template;
 
-	public boolean insertCoustomer(Coustmer coustmer) {
+
+	public boolean insertCoustomer(Coustmer coustmer ,String AdminEmail) {
+
 		try {
 			Object[] Coutomerargs = { coustmer.getAddress(), coustmer.getContact(), coustmer.getName(),
 					coustmer.getAmount(), coustmer.getPaidAmount(), coustmer.getPendingAmount(), coustmer.getStatus(),
-					coustmer.getEmail() };
+					coustmer.getEmail() , AdminEmail};
 
 			int rs = this.template.update(
-					"insert into customer (address,contact, name, payment ,payment_paid,payment_pending,status,email) values(?,?,?,?,?,?,?,?) ",
+					"insert into customer (address,contact, name, payment ,payment_paid,payment_pending,status,email,admin_email) values(?,?,?,?,?,?,?,?,?) ",
 					Coutomerargs);
 
 			Object[] shirtdetailsargs = { coustmer.getEmail(), coustmer.getShirtDetails().getShirtChest(),
@@ -69,8 +72,9 @@ public class CoustomerDao {
 		}
 		return false;
 	}
-	
-	
-	
+
+
+
+
 
 }

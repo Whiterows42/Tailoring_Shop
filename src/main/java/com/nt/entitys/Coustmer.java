@@ -4,7 +4,7 @@ package com.nt.entitys;
 
 
 public class Coustmer {
-	
+
     private int id;
     private String address;
     private String contact;
@@ -18,10 +18,10 @@ public class Coustmer {
     private ShirtDetails shirtDetails;
 
     private PantDetails pantDetails;
-    
+
     private Receipt receipts;
 
-    
+
 	public Coustmer(int id, String address, String contact, String name, float amount, float paidAmount,
 			float pendingAmount, String status, String email, ShirtDetails shirtDetails, PantDetails pantDetails,
 			Receipt receipts) {
@@ -76,7 +76,7 @@ public class Coustmer {
 		this.name = name;
 	}
 
-	
+
 	public String getStatus() {
 		return status;
 	}
@@ -150,7 +150,7 @@ public class Coustmer {
 				+ receipts + "]";
 	}
 
-    
-    
+
+
 }
 
