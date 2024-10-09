@@ -149,7 +149,8 @@ CREATE TABLE receipt (
 
 ## Class Architecture
 
-![Classes_Workflow](https://github.com/user-attachments/assets/0dfeb6ef-ddc3-4171-a695-0c57ff85a9d3)
+![Architecture 1](https://github.com/user-attachments/assets/3c2f49a6-a00c-4446-8798-54313c376bf6)
+
 
 
 ## Working flow
