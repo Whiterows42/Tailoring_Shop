@@ -70,7 +70,8 @@ tailor-shop-management/
     - Open a browser and navigate to `http://localhost:8080/coustomer`.
 ## DataBase Schema Digram 
 
-![drawSQL-image-export-2024-07-22](https://github.com/user-attachments/assets/bc85af80-20bd-489a-9821-8c067429bf57)
+![ERDigram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
+
 
 
 ## Database Schema
