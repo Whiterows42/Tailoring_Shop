@@ -77,7 +77,8 @@ tailor-shop-management/
 ![ER Diagram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
 
 ## Database Schema
-```sqlCREATE TABLE `admin` (
+```sql
+CREATE TABLE `admin` (
   `id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
@@ -100,7 +101,7 @@ CREATE TABLE `customer` (
   `email` varchar(255) DEFAULT NULL,
   `admin_email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `kurta_pajama` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -128,7 +129,7 @@ CREATE TABLE `kurta_pajama` (
   `pajama_type` varchar(50) DEFAULT NULL,
   `pajama_elastic` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `pant_details` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -148,7 +149,7 @@ CREATE TABLE `pant_details` (
   `pant_type` varchar(255) DEFAULT NULL,
   `pant_waist` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `receipt` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -160,7 +161,7 @@ CREATE TABLE `receipt` (
   `paid_amount` float DEFAULT NULL,
   `pending_amount` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `shirt_details` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -181,9 +182,9 @@ CREATE TABLE `shirt_details` (
   `shirt_stomach` varchar(255) DEFAULT NULL,
   `shirt_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-sql```
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    
+```
 
 ## Architecture
 ![Spring Internal Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
