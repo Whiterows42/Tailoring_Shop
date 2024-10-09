@@ -183,7 +183,7 @@ CREATE TABLE `shirt_details` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-```
+sql```
 
 ## Architecture
 ![Spring Internal Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
