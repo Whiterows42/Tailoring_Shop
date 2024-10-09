@@ -77,69 +77,112 @@ tailor-shop-management/
 ![ER Diagram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
 
 ## Database Schema
-```sql
-CREATE TABLE customer (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    address VARCHAR(255),
-    contact VARCHAR(20),
-    name VARCHAR(100),
-    payment FLOAT,
-    payment_paid FLOAT,
-    payment_pending FLOAT,
-    status VARCHAR(50),
-    email VARCHAR(100) UNIQUE
-);
+```sqlCREATE TABLE `admin` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `dob` date DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `image_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`,`admin_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE pant_details (
-    customer_id VARCHAR(100),
-    pant_height VARCHAR(50),
-    pant_knee VARCHAR(50),
-    pant_legs_bottom VARCHAR(50),
-    pant_other VARCHAR(255),
-    pant_pocket VARCHAR(50),
-    pant_press VARCHAR(50),
-    pant_quantity VARCHAR(50),
-    pant_rate FLOAT,
-    pant_seat VARCHAR(50),
-    pant_shape VARCHAR(50),
-    pant_thigh VARCHAR(50),
-    pant_tip VARCHAR(50),
-    pant_type VARCHAR(50),
-    pant_waist VARCHAR(50),
-    FOREIGN KEY (customer_id) REFERENCES customer(email)
-);
+CREATE TABLE `customer` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `address` varchar(255) DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `payment` int DEFAULT NULL,
+  `payment_paid` int DEFAULT NULL,
+  `payment_pending` int DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `admin_email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE shirt_details (
-    customer_id VARCHAR(100),
-    shirt_chest VARCHAR(50),
-    shirt_collar VARCHAR(50),
-    shirt_hand_loose VARCHAR(50),
-    shirt_height VARCHAR(50),
-    shirt_loose VARCHAR(50),
-    shirt_other VARCHAR(255),
-    shirt_press VARCHAR(50),
-    shirt_quantity VARCHAR(50),
-    shirt_rate FLOAT,
-    shirt_shape VARCHAR(50),
-    shirt_shoulder VARCHAR(50),
-    shirt_sleeve VARCHAR(50),
-    shirt_sleeve_cup VARCHAR(50),
-    shirt_stomach VARCHAR(50),
-    shirt_type VARCHAR(50),
-    FOREIGN KEY (customer_id) REFERENCES customer(email)
-);
+CREATE TABLE `kurta_pajama` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_id` varchar(255) NOT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `kurta_size` varchar(50) DEFAULT NULL,
+  `kurta_length` double DEFAULT NULL,
+  `kurta_chest` double DEFAULT NULL,
+  `kurta_sleeve_length` double DEFAULT NULL,
+  `kurta_quantity` varchar(50) DEFAULT NULL,
+  `kurta_shape` varchar(50) DEFAULT NULL,
+  `kurta_neck` varchar(50) DEFAULT NULL,
+  `kurta_fabric` varchar(100) DEFAULT NULL,
+  `kurta_design` varchar(100) DEFAULT NULL,
+  `kurta_pocket` varchar(50) DEFAULT NULL,
+  `kurta_press` varchar(10) DEFAULT NULL,
+  `kurta_type` varchar(50) DEFAULT NULL,
+  `pajama_size` varchar(50) DEFAULT NULL,
+  `pajama_length` double DEFAULT NULL,
+  `pajama_waist` double DEFAULT NULL,
+  `pajama_quantity` varchar(50) DEFAULT NULL,
+  `pajama_shape` varchar(50) DEFAULT NULL,
+  `pajama_fabric` varchar(100) DEFAULT NULL,
+  `pajama_press` varchar(10) DEFAULT NULL,
+  `pajama_type` varchar(50) DEFAULT NULL,
+  `pajama_elastic` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE receipt (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    curr_date DATE,
-    delivery_date DATE,
-    customer VARCHAR(100),
-    status VARCHAR(50),
-    amount FLOAT,
-    paid_amount FLOAT,
-    pending_amount FLOAT,
-    FOREIGN KEY (customer) REFERENCES customer(email)
-);
+CREATE TABLE `pant_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_id` varchar(255) NOT NULL,
+  `pant_height` varchar(255) DEFAULT NULL,
+  `pant_knee` varchar(255) DEFAULT NULL,
+  `pant_legs_bottom` varchar(255) DEFAULT NULL,
+  `pant_other` varchar(255) DEFAULT NULL,
+  `pant_pocket` varchar(255) DEFAULT NULL,
+  `pant_press` varchar(255) DEFAULT NULL,
+  `pant_quantity` varchar(255) DEFAULT NULL,
+  `pant_rate` float NOT NULL,
+  `pant_seat` varchar(255) DEFAULT NULL,
+  `pant_shape` varchar(255) DEFAULT NULL,
+  `pant_thigh` varchar(255) DEFAULT NULL,
+  `pant_tip` varchar(255) DEFAULT NULL,
+  `pant_type` varchar(255) DEFAULT NULL,
+  `pant_waist` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `receipt` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `curr_date` date DEFAULT NULL,
+  `delivery_date` date DEFAULT NULL,
+  `customer` varchar(255) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `amount` float DEFAULT NULL,
+  `paid_amount` float DEFAULT NULL,
+  `pending_amount` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `shirt_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_id` varchar(255) NOT NULL,
+  `shirt_chest` varchar(255) DEFAULT NULL,
+  `shirt_collar` varchar(255) DEFAULT NULL,
+  `shirt_hand_loose` varchar(255) DEFAULT NULL,
+  `shirt_height` varchar(255) DEFAULT NULL,
+  `shirt_loose` varchar(255) DEFAULT NULL,
+  `shirt_other` varchar(255) DEFAULT NULL,
+  `shirt_press` varchar(255) DEFAULT NULL,
+  `shirt_quantity` varchar(255) DEFAULT NULL,
+  `shirt_rate` float NOT NULL,
+  `shirt_shape` varchar(255) DEFAULT NULL,
+  `shirt_shoulder` varchar(255) DEFAULT NULL,
+  `shirt_sleeve` varchar(255) DEFAULT NULL,
+  `shirt_sleeve_cup` varchar(255) DEFAULT NULL,
+  `shirt_stomach` varchar(255) DEFAULT NULL,
+  `shirt_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 ```
 
 ## Architecture
