@@ -1,3 +1,7 @@
+Here's the corrected version of your documentation with spelling mistakes addressed:
+
+---
+
 # Tailor Shop Management System
 
 ## Overview
@@ -58,7 +62,6 @@ tailor-shop-management/
     spring.datasource.username=root
     spring.datasource.password=yourpassword
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-    
     ```
 
 3. **Run the Application**
@@ -67,12 +70,11 @@ tailor-shop-management/
     ```
 
 4. **Access the Application**
-    - Open a browser and navigate to `http://localhost:8080/coustomer`.
-## DataBase Schema Digram 
+    - Open a browser and navigate to `http://localhost:8080/customer`.
 
-![ERDigram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
+## Database Schema Diagram
 
-
+![ER Diagram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
 
 ## Database Schema
 ```sql
@@ -140,53 +142,49 @@ CREATE TABLE receipt (
 );
 ```
 
-
-
-
 ## Architecture
-![Spring_internal_Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
-
+![Spring Internal Work](https://github.com/user-attachments/assets/883a6a35-f728-4c3f-bbc2-28620e76420e)
 
 ## Class Architecture
 
 ![Architecture 1](https://github.com/user-attachments/assets/3c2f49a6-a00c-4446-8798-54313c376bf6)
 
-
-
-## Working flow
+## Workflow
 
 Landing Page
-![homepage](https://github.com/user-attachments/assets/fcbe742f-cf0c-4940-8950-505cdedffe0b)
+![Homepage](https://github.com/user-attachments/assets/fcbe742f-cf0c-4940-8950-505cdedffe0b)
 
-Request URL: /coustomer
-Controller Method: sendToLandingPage(Model model)
-View: CoustmerPage.jsp
-![coustmoer_page](https://github.com/user-attachments/assets/9edf6baa-09d7-4fc3-be7b-0e25099dbf02)
+Request URL: /customer  
+Controller Method: sendToLandingPage(Model model)  
+View: CustomerPage.jsp  
+![Customer Page](https://github.com/user-attachments/assets/9edf6baa-09d7-4fc3-be7b-0e25099dbf02)
 
 Description: Renders the customer landing page with a welcome message.
-Add Customer Data
-Request URL: /getdata
-Controller Method: getData(@ModelAttribute Coustmer c, Model model)
-View: CoustmerPage.jsp
-![tostMessage](https://github.com/user-attachments/assets/c4ebad4d-1a04-4fd6-8dcb-4c69a3b0270f)
+
+Add Customer Data  
+Request URL: /getdata  
+Controller Method: getData(@ModelAttribute Customer c, Model model)  
+View: CustomerPage.jsp  
+![Toast Message](https://github.com/user-attachments/assets/c4ebad4d-1a04-4fd6-8dcb-4c69a3b0270f)
 
 Description: Inserts customer data into the database and updates the view with a success message.
-Admin Dashboard
-Request URL: /dashboard
-Controller Method: admindashboard(Model model)
-View: Dashboard.jsp
-![Admindashboard_page](https://github.com/user-attachments/assets/816a73de-ba97-4124-b3ee-2f79b9b8ef9b)
+
+Admin Dashboard  
+Request URL: /dashboard  
+Controller Method: adminDashboard(Model model)  
+View: Dashboard.jsp  
+![Admin Dashboard Page](https://github.com/user-attachments/assets/816a73de-ba97-4124-b3ee-2f79b9b8ef9b)
 
 Description: Displays the admin dashboard with user count, order count, customer details, and monthly revenue.
-![Order_Details](https://github.com/user-attachments/assets/c175e312-0f5c-4a3b-9cef-afceb4c90a19)
+![Order Details](https://github.com/user-attachments/assets/c175e312-0f5c-4a3b-9cef-afceb4c90a19)
 
-
-Usage
-Navigate to the customer page to add new customer details.
-View the admin dashboard for an overview of the shop's performance, including customer counts, order counts, and revenue.
-
+## Usage
+- Navigate to the customer page to add new customer details.
+- View the admin dashboard for an overview of the shop's performance, including customer counts, order counts, and revenue.
 
 ## Contributing
-
 Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
 
+---
+
+Feel free to reach out if you need any further modifications or assistance!
