@@ -26,7 +26,8 @@ The Tailor Shop Management System is a web application designed to manage custom
 - Payment tracking: Track payments, paid amounts, and pending amounts.
 - Dashboard: Overview of customer count, order count, and monthly revenue.
 
-![Admin Dashboard](https://github.com/user-attachments/assets/656f5117-429f-473a-a70a-1ab0ec4b5a3b)
+![dashboard](https://github.com/user-attachments/assets/73176ed9-1549-47e0-9078-f126584f3e64)
+
 
 ## Project Structure
 ```plaintext
@@ -220,7 +221,7 @@ Admin Dashboard
 Request URL: /dashboard  
 Controller Method: adminDashboard(Model model)  
 View: Dashboard.jsp  
-![Admin Dashboard Page](https://github.com/user-attachments/assets/816a73de-ba97-4124-b3ee-2f79b9b8ef9b)
+![dashboard](https://github.com/user-attachments/assets/73176ed9-1549-47e0-9078-f126584f3e64)
 
 Description: Displays the admin dashboard with user count, order count, customer details, and monthly revenue.
 ![Order Details](https://github.com/user-attachments/assets/c175e312-0f5c-4a3b-9cef-afceb4c90a19)
