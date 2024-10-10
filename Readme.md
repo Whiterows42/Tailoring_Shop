@@ -1,5 +1,3 @@
-Here's the corrected version of your documentation with spelling mistakes addressed:
-
 ---
 
 # Tailor Shop Management System
