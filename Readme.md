@@ -201,7 +201,8 @@ Landing Page
 Request URL: /customer  
 Controller Method: sendToLandingPage(Model model)  
 View: CustomerPage.jsp  
-![Customer Page](https://github.com/user-attachments/assets/9edf6baa-09d7-4fc3-be7b-0e25099dbf02)
+![customer](https://github.com/user-attachments/assets/e7a11f26-32a1-4d5b-a24f-2eea6dc84e6b)
+
 
 Description: Renders the customer landing page with a welcome message.
 
