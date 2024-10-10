@@ -198,19 +198,21 @@ CREATE TABLE `shirt_details` (
 Landing Page
 ![Homepage](https://github.com/user-attachments/assets/fcbe742f-cf0c-4940-8950-505cdedffe0b)
 
-Request URL: /customer  
+Request URL: /dashboard  
 Controller Method: sendToLandingPage(Model model)  
-View: CustomerPage.jsp  
-![customer](https://github.com/user-attachments/assets/e7a11f26-32a1-4d5b-a24f-2eea6dc84e6b)
+View: Dashboard.jsp  
+![dashboard](https://github.com/user-attachments/assets/763d98c5-9156-4d33-9c10-d8bebfc9542d)
+
 
 
 Description: Renders the customer landing page with a welcome message.
 
 Add Customer Data  
-Request URL: /getdata  
+Request URL: /user/customer 
 Controller Method: getData(@ModelAttribute Customer c, Model model)  
 View: CustomerPage.jsp  
-![Toast Message](https://github.com/user-attachments/assets/c4ebad4d-1a04-4fd6-8dcb-4c69a3b0270f)
+![customer](https://github.com/user-attachments/assets/61635759-f5e9-43c3-bf7f-e42ff9e6fbd7)
+
 
 Description: Inserts customer data into the database and updates the view with a success message.
 
