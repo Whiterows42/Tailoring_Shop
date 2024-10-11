@@ -23,8 +23,8 @@ The Tailor Shop Management System is a web application designed to manage custom
 - Order management: Record and view orders with detailed measurements.
 - Payment tracking: Track payments, paid amounts, and pending amounts.
 - Dashboard: Overview of customer count, order count, and monthly revenue.
+![dashboard](https://github.com/user-attachments/assets/6e011cd9-4857-492b-943a-75e9bacf181f)
 
-![dashboard](https://github.com/user-attachments/assets/73176ed9-1549-47e0-9078-f126584f3e64)
 
 
 ## Project Structure
@@ -73,7 +73,8 @@ tailor-shop-management/
 
 ## Database Schema Diagram
 
-![ER Diagram](https://github.com/user-attachments/assets/8c11deb2-7269-450c-b7a8-f62920466e4c)
+![ER_Digranm](https://github.com/user-attachments/assets/3f6ebcd1-8835-49fe-bc7f-081a0a86324c)
+
 
 ## Database Schema
 ```sql
@@ -100,7 +101,19 @@ CREATE TABLE `customer` (
   `email` varchar(255) DEFAULT NULL,
   `admin_email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `items` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(255) NOT NULL,
+  `item_type` varchar(255) NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `recipt_id` int NOT NULL,
+  `product_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `kurta_pajama` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -126,9 +139,10 @@ CREATE TABLE `kurta_pajama` (
   `pajama_fabric` varchar(100) DEFAULT NULL,
   `pajama_press` varchar(10) DEFAULT NULL,
   `pajama_type` varchar(50) DEFAULT NULL,
-  `pajama_elastic` varchar(50) DEFAULT NULL,
+  `kurta_rate` float NOT NULL,
+  `pajama_rate` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `pant_details` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -148,7 +162,7 @@ CREATE TABLE `pant_details` (
   `pant_type` varchar(255) DEFAULT NULL,
   `pant_waist` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `receipt` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -160,7 +174,7 @@ CREATE TABLE `receipt` (
   `paid_amount` float DEFAULT NULL,
   `pending_amount` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `shirt_details` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -181,7 +195,8 @@ CREATE TABLE `shirt_details` (
   `shirt_stomach` varchar(255) DEFAULT NULL,
   `shirt_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
     
 ```
 
@@ -200,7 +215,8 @@ Landing Page
 Request URL: /dashboard  
 Controller Method: sendToLandingPage(Model model)  
 View: Dashboard.jsp  
-![dashboard](https://github.com/user-attachments/assets/763d98c5-9156-4d33-9c10-d8bebfc9542d)
+
+![dashboard](https://github.com/user-attachments/assets/74732174-c5c2-4473-a030-decd58c58894)
 
 
 
@@ -219,10 +235,12 @@ Admin Dashboard
 Request URL: /dashboard  
 Controller Method: adminDashboard(Model model)  
 View: Dashboard.jsp  
-![dashboard](https://github.com/user-attachments/assets/73176ed9-1549-47e0-9078-f126584f3e64)
+![dashboard](https://github.com/user-attachments/assets/b31a0101-7536-40de-a314-cbc18a56ba52)
+
 
 Description: Displays the admin dashboard with user count, order count, customer details, and monthly revenue.
-![Order Details](https://github.com/user-attachments/assets/c175e312-0f5c-4a3b-9cef-afceb4c90a19)
+![viewdetailsPage](https://github.com/user-attachments/assets/47994e92-aa24-4831-9b5f-0b95dc1734bb)
+
 
 ## Usage
 - Navigate to the customer page to add new customer details.
