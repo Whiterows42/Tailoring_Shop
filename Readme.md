@@ -250,5 +250,3 @@ Description: Displays the admin dashboard with user count, order count, customer
 Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
 
 ---
-
-Feel free to reach out if you need any further modifications or assistance!
